@@ -1,0 +1,1 @@
+esperanto_translator = require("esperanto_translator")

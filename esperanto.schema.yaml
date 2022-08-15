@@ -9,6 +9,7 @@ schema:
     - Darcy Shen <sadhen@zoho.com>
     - 阿森納裡 <15678407@qq.com>
     - Ayaka Mikazuki <ayaka@mail.shn.hk>
+    - Mslxl <i@mslxl.com>
   description: |
     rime 世界语输入法，用原字母 + x 输入六个带帽字母 ĉĝĥĵŝŭ。
 
@@ -31,17 +32,15 @@ engine:
     - abc_segmentor
     - fallback_segmentor
   translators:
-    - table_translator  # 碼表翻譯器
+    - lua_translator@esperanto_translator #核心在这
 
 speller:
-  alphabet: cghjsuxCGHJSUX
-  initials: 'cghjsuCGHJSU'  # 可作始碼
-  finals: 'xX'  # 可作末碼
-  auto_select: true  # 頂字上屏
-  max_code_length: 2
-  auto_select_unique_candidate: true  # 無重碼自動上屏
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA(),.!
+  delimiter: " '"
+  auto_select: true
+  auto_select_unique_candidate: true
 
 translator:
-  dictionary: esperanto
   enable_completion: false  # 禁用編碼提示
   enable_user_dict: false  # 禁用用户词典
+  enable_sentence: true
