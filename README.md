@@ -5,7 +5,8 @@
 相比于 dekvar (Darcy Shen: sadhen@zoho.com) 和 arsenali 的[原版](https://github.com/arsenali/rime-esperanto)有以下区别：
 
 - 现在方案通过将候选项中的 cghjsu + x 替换为 ĉĝĥĵŝŭd 的方法，避免了原方案 cghjsu 结尾需要打空格时，需要按两次空格的问题
-- 通过 lua 脚本的方式，可实现更好的自定义
+- 通过 lua 脚本的方式实现更好的自定义
+- 添加词库
 
 ![Preview](./preview.gif)
 
@@ -24,20 +25,16 @@ patch:
   schema_list:
     - schema: flypy
     - schema: japanese
-+    - schema: Esperanto
++    - schema: esperanto
 ...
 ```
 
 3. 在 `rime.lua` 中添加代码:
 
 ```diff
-+esperanto_translator = require("esperanto_translator")
++esperanto = require("esperanto")
++epo_translator = esperanto.epo_translator
++epo_append_blank_filter = esperanto.epo_append_blank_filter
 ```
 
 <br>
-
-### &#8627; Stargazers
-[![Stargazers repo roster for @arsenali/rime-esperanto](https://reporoster.com/stars/arsenali/rime-esperanto)](https://github.com/arsenali/rime-esperanto/stargazers)
-
-### &#8627; Forkers
-[![Forkers repo roster for @arsenali/rime-esperanto](https://reporoster.com/forks/arsenali/rime-esperanto)](https://github.com/arsenali/rime-esperanto/network/members)

@@ -1,0 +1,13 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# esperanto - 世界語
+# author：mslxl <i@mslxl.com>
+#
+
+---
+name: esperanto
+version: "0.1"
+sort: original
+use_preset_vocabulary: false
+...
